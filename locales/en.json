@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "games": "Games",
+    "products": "Products",
+    "information": "Information",
+    "ja_live": "JA LIVE"
+  },
+  "hero": {
+    "title": "JA GAMES",
+    "subtitle": "Your Entertainment Portal",
+    "events_title": "JA GAMES Events",
+    "events_subtitle": "Discover the best events with incredible DJ Sets",
+    "games_title": "JA GAMES Games",
+    "games_subtitle": "The best electronic music games",
+    "products_title": "JA GAMES Products",
+    "products_subtitle": "Official merchandise and music",
+    "information_title": "JA GAMES Information",
+    "information_subtitle": "Learn more about us"
+  },
+  "sections": {
+    "upcoming_events": "Upcoming Events",
+    "games": "Available Games",
+    "products": "Available Products",
+    "about": "About JA GAMES"
+  },
+  "buttons": {
+    "play_now": "Play Now",
+    "buy_now": "Buy Now",
+    "download_free": "Download Free",
+    "view_details": "View Details",
+    "explore": "Explore"
+  },
+  "events": {
+    "date": "Date",
+    "date_pending": "Date to be confirmed",
+    "dj_sets": "DJ Sets",
+    "festivals": "Festivals",
+    "events": "Events"
+  },
+  "products": {
+    "price": "Price",
+    "size": "Size",
+    "format": "Format",
+    "resolution": "Resolution",
+    "consult": "Consult",
+    "merchandise": "Merchandise",
+    "music": "Music"
+  },
+  "games": {
+    "categories": {
+      "umf": "UMF",
+      "ultra": "Ultra",
+      "edc": "EDC",
+      "various": "Various"
+    }
+  },
+  "footer": {
+    "quick_links": "Quick Links",
+    "follow_us": "Follow Us",
+    "copyright": "All rights reserved"
+  },
+  "radio": {
+    "title": "JA GAMES Radio",
+    "playing": "Playing",
+    "paused": "Paused",
+    "volume": "Volume",
+    "live_stream": "🎥 LIVE STREAM - JA GAMES",
+    "radio_live": "JA GAMES Radio - Live"
+  },
+  "floating_player": {
+    "title": "JA GAMES Radio",
+    "close": "Close"
+  },
+  "errors": {
+    "content_load_error": "Error loading content",
+    "content_load_message": "Could not load content. Please try again later."
+  }
+}

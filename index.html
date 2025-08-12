@@ -6,24 +6,32 @@
     <title>JA GAMES - Tu Portal de Entretenimiento</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
+        <div class="containernav">
             <div class="logo">
-                <h1>JA GAMES</h1>
-                <p>Tu Portal de Entretenimiento</p>
+                <img src="/media/GeneralImages/JAGAMES-Logo.png" class="logonav" alt="Logo de JA GAMES">
             </div>
-            <nav class="nav">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <nav class="nav" id="mobileNav">
                 <ul>
-                    <li><a href="#eventos">Eventos</a></li>
-                    <li><a href="#juegos">Juegos</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#informacion">Información</a></li>
-                    <li><a href="#ja-live">JA LIVE</a></li>
+                    <li><a href="pages/eventos.html" data-i18n="nav.events">Eventos</a></li>
+                    <li><a href="pages/juegos.html" data-i18n="nav.games">Juegos</a></li>
+                    <li><a href="pages/productos.html" data-i18n="nav.products">Productos</a></li>
+                    <li><a href="pages/informacion.html" data-i18n="nav.information">Información</a></li>
+                    <li><a href="pages/ja-live.html" data-i18n="nav.ja_live">JA LIVE</a></li>
                 </ul>
             </nav>
+            <div id="languageSelector"></div>
         </div>
     </header>
 
@@ -31,192 +39,74 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Bienvenido a JA GAMES</h2>
+                <h2 class="heroh2">BIENVENIDO A JA GAMES</h2>
                 <p>Descubre eventos increíbles, juegos emocionantes y mucho más</p>
-                <a href="#eventos" class="btn-primary">Explorar</a>
+                <a href="pages/eventos.html" class="btn-primary">Explorar</a>
             </div>
         </div>
     </section>
 
-    <!-- Eventos Section -->
-    <section id="eventos" class="section">
+    <!-- Preview Sections -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Eventos</h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-image">
+            <h2 class="section-title">Nuestras Secciones</h2>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <div class="preview-icon">
                         <i class="fas fa-music"></i>
                     </div>
-                    <div class="event-content">
-                        <h3>Evento 1</h3>
-                        <p>Descripción del evento 1 con DJ Sets increíbles</p>
-                        <div class="event-links">
-                            <a href="#" class="btn-secondary">Ver DJ Sets</a>
-                            <a href="#" class="btn-outline">Más Info</a>
-                        </div>
-                    </div>
+                    <h3>Eventos</h3>
+                    <p>Descubre los mejores eventos con DJ Sets increíbles y música en vivo.</p>
+                    <a href="pages/eventos.html" class="btn-primary">Ver Eventos</a>
                 </div>
-                <div class="event-card">
-                    <div class="event-image">
-                        <i class="fas fa-star"></i>
+                <div class="preview-card">
+                    <div class="preview-icon">
+                        <i class="fas fa-gamepad"></i>
                     </div>
-                    <div class="event-content">
-                        <h3>Evento 2</h3>
-                        <p>Descripción del evento 2 con DJ Sets increíbles</p>
-                        <div class="event-links">
-                            <a href="#" class="btn-secondary">Ver DJ Sets</a>
-                            <a href="#" class="btn-outline">Más Info</a>
-                        </div>
-                    </div>
+                    <h3>Juegos</h3>
+                    <p>Explora nuestra colección de juegos organizados por categorías.</p>
+                    <a href="pages/juegos.html" class="btn-primary">Ver Juegos</a>
                 </div>
-                <div class="event-card">
-                    <div class="event-image">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <div class="event-content">
-                        <h3>Evento 3</h3>
-                        <p>Descripción del evento 3 con DJ Sets increíbles</p>
-                        <div class="event-links">
-                            <a href="#" class="btn-secondary">Ver DJ Sets</a>
-                            <a href="#" class="btn-outline">Más Info</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Juegos Section -->
-    <section id="juegos" class="section">
-        <div class="container">
-            <h2 class="section-title">Juegos</h2>
-            <div class="games-grid">
-                <div class="game-category">
-                    <h3>UMF</h3>
-                    <div class="games-list">
-                        <a href="#" class="game-item">Ultra Music Festival 2024</a>
-                        <a href="#" class="game-item">UMF Experience</a>
-                        <a href="#" class="game-item">UMF Classics</a>
-                    </div>
-                </div>
-                <div class="game-category">
-                    <h3>Ultra</h3>
-                    <div class="games-list">
-                        <a href="#" class="game-item">Ultra Racing</a>
-                        <a href="#" class="game-item">Ultra Adventure</a>
-                        <a href="#" class="game-item">Ultra Challenge</a>
-                    </div>
-                </div>
-                <div class="game-category">
-                    <h3>EDC</h3>
-                    <div class="games-list">
-                        <a href="#" class="game-item">Electric Daisy Carnival</a>
-                        <a href="#" class="game-item">EDC World</a>
-                        <a href="#" class="game-item">EDC Experience</a>
-                    </div>
-                </div>
-                <div class="game-category">
-                    <h3>Variados</h3>
-                    <div class="games-list">
-                        <a href="#" class="game-item">Arcade Classics</a>
-                        <a href="#" class="game-item">Puzzle Games</a>
-                        <a href="#" class="game-item">Action Games</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Productos Section -->
-    <section id="productos" class="section">
-        <div class="container">
-            <h2 class="section-title">Productos</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">
+                <div class="preview-card">
+                    <div class="preview-icon">
                         <i class="fas fa-download"></i>
                     </div>
-                    <h3>Producto 1</h3>
-                    <p>Descripción del producto 1</p>
-                    <a href="#" class="btn-primary">Descargar</a>
+                    <h3>Productos</h3>
+                    <p>Descarga productos exclusivos y contenido especial.</p>
+                    <a href="pages/productos.html" class="btn-primary">Ver Productos</a>
                 </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-download"></i>
+                <div class="preview-card">
+                    <div class="preview-icon">
+                        <i class="fas fa-info-circle"></i>
                     </div>
-                    <h3>Producto 2</h3>
-                    <p>Descripción del producto 2</p>
-                    <a href="#" class="btn-primary">Descargar</a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-download"></i>
-                    </div>
-                    <h3>Producto 3</h3>
-                    <p>Descripción del producto 3</p>
-                    <a href="#" class="btn-primary">Descargar</a>
+                    <h3>Información</h3>
+                    <p>Conoce más sobre JA GAMES y encuentra enlaces útiles.</p>
+                    <a href="pages/informacion.html" class="btn-primary">Más Info</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Información Section -->
-    <section id="informacion" class="section">
-        <div class="container">
-            <h2 class="section-title">Información</h2>
-            <div class="info-content">
-                <div class="info-card">
-                    <h3>Sobre JA GAMES</h3>
-                    <p>JA GAMES es tu portal de entretenimiento definitivo. Ofrecemos eventos increíbles, juegos emocionantes y productos de calidad para toda la comunidad.</p>
-                    <div class="info-links">
-                        <a href="#" class="btn-outline">Conoce Más</a>
-                        <a href="#" class="btn-outline">Contacto</a>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <h3>Enlaces Útiles</h3>
-                    <div class="links-list">
-                        <a href="#" class="link-item">Política de Privacidad</a>
-                        <a href="#" class="link-item">Términos de Servicio</a>
-                        <a href="#" class="link-item">FAQ</a>
-                        <a href="#" class="link-item">Soporte</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- JA LIVE Section -->
-    <section id="ja-live" class="section">
+    <!-- JA LIVE Preview -->
+    <section class="section">
         <div class="container">
             <h2 class="section-title">JA LIVE</h2>
-            <div class="live-content">
-                <div class="radio-player">
-                    <div class="radio-header">
-                        <h3>Radio 24/7</h3>
-                        <p>Escucha música increíble en vivo</p>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <div class="preview-icon">
+                        <i class="fas fa-broadcast-tower"></i>
                     </div>
-                    <div class="player-controls">
-                        <button id="playBtn" class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="player-info">
-                            <span id="status">Detenido</span>
-                            <span id="title">JA GAMES Radio</span>
-                        </div>
-                    </div>
-                    <audio id="audioPlayer" preload="none">
-                        <source src="https://stream.zeno.fm/hx2n86ucgabuv" type="audio/mpeg">
-                    </audio>
+                    <h3>Radio 24/7</h3>
+                    <p>Escucha música electrónica increíble en vivo las 24 horas del día.</p>
+                    <a href="pages/ja-live.html" class="btn-primary">Escuchar Radio</a>
                 </div>
-                <div class="live-links">
-                    <h3>Enlaces en Vivo</h3>
-                    <div class="live-links-grid">
-                        <a href="#" class="live-link">Stream Principal</a>
-                        <a href="#" class="live-link">Eventos en Vivo</a>
-                        <a href="#" class="live-link">Chat en Vivo</a>
-                        <a href="#" class="live-link">Programación</a>
+                <div class="preview-card">
+                    <div class="preview-icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
+                    <h3>Programación</h3>
+                    <p>Consulta la programación completa y próximos shows especiales.</p>
+                    <a href="pages/ja-live.html" class="btn-primary">Ver Programación</a>
                 </div>
             </div>
         </div>
@@ -233,10 +123,10 @@
                 <div class="footer-section">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="#eventos">Eventos</a></li>
-                        <li><a href="#juegos">Juegos</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#ja-live">JA LIVE</a></li>
+                        <li><a href="pages/eventos.html">Eventos</a></li>
+                        <li><a href="pages/juegos.html">Juegos</a></li>
+                        <li><a href="pages/productos.html">Productos</a></li>
+                        <li><a href="pages/ja-live.html">JA LIVE</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -255,6 +145,7 @@
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

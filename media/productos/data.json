@@ -1,0 +1,69 @@
+[
+  {
+    "categoria": "Merchandise",
+    "nombre": "JA GAMES T-Shirt",
+    "logo": "tshirt-logo.png",
+    "imagen_base": "tshirt.jpg",
+    "link": "https://example.com/download/tshirt",
+    "titulo": "T-Shirt Oficial",
+    "descripcion": "Camiseta oficial de JA GAMES con diseño exclusivo",
+    "precio": "$25.99",
+    "talla": "S, M, L, XL"
+  },
+  {
+    "categoria": "Merchandise",
+    "nombre": "JA GAMES Hoodie",
+    "logo": "hoodie-logo.png",
+    "imagen_base": "hoodie.jpg",
+    "link": "https://example.com/download/hoodie",
+    "titulo": "Hoodie Oficial",
+    "descripcion": "Sudadera con capucha de JA GAMES, perfecta para el clima frío",
+    "precio": "$45.99",
+    "talla": "S, M, L, XL"
+  },
+  {
+    "categoria": "Merchandise",
+    "nombre": "JA GAMES Cap",
+    "logo": "cap-logo.png",
+    "imagen_base": "cap.jpg",
+    "link": "https://example.com/download/cap",
+    "titulo": "Gorra Oficial",
+    "descripcion": "Gorra ajustable con el logo de JA GAMES",
+    "precio": "$19.99",
+    "talla": "Única"
+  },
+  {
+    "categoria": "Merchandise",
+    "nombre": "JA GAMES Wristband",
+    "logo": "wristband-logo.png",
+    "imagen_base": "wristband.jpg",
+    "link": "https://example.com/download/wristband",
+    "titulo": "Pulsera Oficial",
+    "descripcion": "Pulsera de silicona con el logo de JA GAMES",
+    "precio": "$8.99",
+    "talla": "Única"
+  },
+  {
+    "categoria": "Música",
+    "nombre": "JA GAMES Mix 2024",
+    "logo": "mix-logo.png",
+    "imagen_base": "mix2024.jpg",
+    "link": "https://example.com/download/mix2024",
+    "titulo": "Mix Oficial 2024",
+    "descripcion": "Compilación de los mejores tracks de JA GAMES 2024",
+    "precio": "Gratis",
+    "formato": "MP3, WAV"
+  },
+  {
+    "categoria": "Música",
+    "nombre": "JA GAMES Wallpapers",
+    "logo": "wallpapers-logo.png",
+    "imagen_base": "wallpapers.jpg",
+    "link": "https://example.com/download/wallpapers",
+    "titulo": "Wallpapers Oficiales",
+    "descripcion": "Colección de wallpapers exclusivos de JA GAMES",
+    "precio": "Gratis",
+    "resolucion": "4K, 1080p, 720p"
+  }
+]
+

@@ -1,0 +1,75 @@
+[
+  {
+    "categoria": "UMF",
+    "nombre": "Ultra Music Festival 2024",
+    "logo": "umf-logo.png",
+    "imagen_base": "umf2024.jpg",
+    "link": "https://example.com/umf-game",
+    "titulo": "UMF Miami 2024",
+    "descripcion": "Experimenta la energía del Ultra Music Festival en Miami con este juego inmersivo"
+  },
+  {
+    "categoria": "UMF",
+    "nombre": "UMF Miami Experience",
+    "logo": "umf-miami-logo.png",
+    "imagen_base": "umf-miami.jpg",
+    "link": "https://example.com/umf-miami",
+    "titulo": "Miami Vibes",
+    "descripcion": "Sumérgete en la atmósfera única de Miami durante el UMF"
+  },
+  {
+    "categoria": "Ultra",
+    "nombre": "Ultra Europe",
+    "logo": "ultra-europe-logo.png",
+    "imagen_base": "ultra.jpg",
+    "link": "https://example.com/ultra-europe",
+    "titulo": "Ultra Europe Experience",
+    "descripcion": "Vive la experiencia del Ultra Music Festival en Europa"
+  },
+  {
+    "categoria": "Ultra",
+    "nombre": "Ultra Europe Adventure",
+    "logo": "ultra-adventure-logo.png",
+    "imagen_base": "ultra-europe.jpg",
+    "link": "https://example.com/ultra-adventure",
+    "titulo": "European Adventure",
+    "descripcion": "Aventúrate en el Ultra Europe con este juego emocionante"
+  },
+  {
+    "categoria": "EDC",
+    "nombre": "Electric Daisy Carnival",
+    "logo": "edc-logo.png",
+    "imagen_base": "edc.jpg",
+    "link": "https://example.com/edc-game",
+    "titulo": "EDC Las Vegas",
+    "descripcion": "Disfruta del Electric Daisy Carnival en Las Vegas"
+  },
+  {
+    "categoria": "EDC",
+    "nombre": "EDC Vegas Experience",
+    "logo": "edc-vegas-logo.png",
+    "imagen_base": "edc-vegas.jpg",
+    "link": "https://example.com/edc-vegas",
+    "titulo": "Vegas Nightlife",
+    "descripcion": "Experimenta la vida nocturna de Vegas en el EDC"
+  },
+  {
+    "categoria": "Variados",
+    "nombre": "Electronic Music Mix",
+    "logo": "electronic-logo.png",
+    "imagen_base": "electronic-mix.jpg",
+    "link": "https://example.com/electronic-mix",
+    "titulo": "Electronic Mix",
+    "descripcion": "Mezcla de música electrónica de diferentes festivales"
+  },
+  {
+    "categoria": "Variados",
+    "nombre": "DJ Experience",
+    "logo": "dj-logo.png",
+    "imagen_base": "dj-experience.jpg",
+    "link": "https://example.com/dj-experience",
+    "titulo": "DJ Simulator",
+    "descripcion": "Conviértete en DJ y crea tus propias mezclas"
+  }
+]
+

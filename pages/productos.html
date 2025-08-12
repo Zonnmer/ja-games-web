@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - JA GAMES</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="containernav">
+            <div class="logo">
+                <img src="/media/GeneralImages/JAGAMES-Logo.png" class="logonav" alt="Logo de JA GAMES">
+            </div>
+            <nav class="nav">
+                <a href="../index.html">Inicio</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="juegos.html">Juegos</a>
+                <a href="productos.html" class="active">Productos</a>
+                <a href="informacion.html">Información</a>
+                <a href="ja-live.html">JA LIVE</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Productos</h1>
+            <p class="hero-subtitle">Descarga nuestros productos exclusivos de música electrónica</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Descargas Disponibles</h2>
+            
+            <div class="products-container">
+                <!-- Content will be loaded dynamically from JSON -->
+                <div class="loading-message">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Cargando productos...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JA GAMES</h3>
+                    <p>Tu destino para música electrónica y entretenimiento</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="juegos.html">Juegos</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="informacion.html">Información</a></li>
+                        <li><a href="ja-live.html">JA LIVE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JA GAMES. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/content-loader.js"></script>
+</body>
+</html>

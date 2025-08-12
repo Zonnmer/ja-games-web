@@ -1,134 +1,180 @@
-# JA GAMES - Portal de Entretenimiento
+# JA GAMES Web
 
-## Descripción
-JA GAMES es un portal web moderno y dinámico que ofrece una experiencia completa de entretenimiento con eventos, juegos, productos y radio en vivo.
+Sitio web dinámico para JA GAMES con sistema de gestión de contenido automático.
 
-## Características
-
-### 🎵 Eventos
-- Sección dedicada a eventos con DJ Sets
-- Diseño atractivo con tarjetas interactivas
-- Enlaces a sets de música y información adicional
-
-### 🎮 Juegos
-- Categorías organizadas: UMF, Ultra, EDC, Variados
-- Enlaces directos a juegos
-- Interfaz intuitiva y fácil navegación
-
-### 📦 Productos
-- Sección de descargas de productos
-- Botones de descarga funcionales
-- Notificaciones de estado de descarga
-
-### ℹ️ Información
-- Información sobre JA GAMES
-- Enlaces útiles y políticas
-- Sección de contacto
-
-### 🎧 JA LIVE
-- **Radio 24/7** con stream en vivo desde Zeno.fm
-- Reproductor integrado con controles
-- Enlaces adicionales para contenido en vivo
-- Estado de conexión en tiempo real
-
-## Tecnologías Utilizadas
-
-- **HTML5**: Estructura semántica y accesible
-- **CSS3**: Diseño moderno con gradientes y animaciones
-- **JavaScript**: Funcionalidades interactivas y reproductor de radio
-- **Font Awesome**: Iconos profesionales
-- **Responsive Design**: Compatible con todos los dispositivos
-
-## Colores del Tema
-
-- **Rojo**: `#ff3333` - Color principal
-- **Naranja**: `#ff6600` - Color secundario
-- **Amarillo**: `#ffcc00` - Color de acento
-
-## Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
 JA GAMES Web/
-├── index.html          # Página principal
+├── pages/           # Páginas HTML
+│   ├── eventos.html
+│   ├── juegos.html
+│   ├── productos.html
+│   ├── informacion.html
+│   └── ja-live.html
+├── media/           # Gestión de contenido
+│   ├── juegos/
+│   │   ├── data.json
+│   │   └── images/
+│   └── productos/
+│       ├── data.json
+│       └── images/
 ├── css/
-│   └── styles.css      # Estilos CSS
+│   └── styles.css
 ├── js/
-│   └── main.js         # Funcionalidades JavaScript
-└── README.md           # Documentación
+│   ├── main.js
+│   └── content-loader.js
+└── index.html
 ```
 
-## Funcionalidades Principales
+## 🎯 Sistema de Gestión de Contenido
 
-### Reproductor de Radio
-- Stream en vivo desde `https://stream.zeno.fm/hx2n86ucgabuv`
-- Controles de play/pause
-- Indicadores de estado (cargando, reproduciendo, error)
-- Manejo de errores de conexión
+### **Cómo Agregar Nuevos Juegos:**
 
-### Navegación
-- Header fijo con navegación suave
-- Scroll automático a secciones
-- Animaciones al hacer scroll
-
-### Interactividad
-- Efectos hover en tarjetas
-- Notificaciones de estado
-- Contador de visitantes
-- Manejo de eventos de red
-
-## Cómo Usar
-
-1. Abre `index.html` en tu navegador web
-2. Navega por las diferentes secciones usando el menú superior
-3. En la sección JA LIVE, haz clic en el botón de play para escuchar la radio
-4. Explora los eventos, juegos y productos disponibles
-
-## Características Responsivas
-
-- Diseño adaptable a móviles, tablets y desktop
-- Menú responsive que se adapta a pantallas pequeñas
-- Grid layouts que se reorganizan automáticamente
-- Botones y controles optimizados para touch
-
-## Compatibilidad
-
-- Chrome (recomendado)
-- Firefox
-- Safari
-- Edge
-- Navegadores móviles
-
-## Personalización
-
-### Cambiar Colores
-Los colores se pueden modificar fácilmente editando las variables CSS en `css/styles.css`:
-
-```css
-:root {
-    --primary-red: #ff3333;
-    --primary-orange: #ff6600;
-    --primary-yellow: #ffcc00;
-    /* ... más colores */
+1. **Edita el archivo**: `media/juegos/data.json`
+2. **Agrega una nueva entrada**:
+```json
+{
+  "categoria": "UMF",
+  "nombre": "Nuevo Juego UMF",
+  "imagen": "nuevo-juego.jpg",
+  "link": "https://example.com/nuevo-juego"
 }
 ```
 
-### Agregar Contenido
-- **Eventos**: Edita la sección de eventos en `index.html`
-- **Juegos**: Modifica las categorías y enlaces en la sección de juegos
-- **Productos**: Agrega nuevos productos en la sección correspondiente
-- **Radio**: Cambia el stream URL en el elemento `<audio>` de JA LIVE
+3. **Coloca la imagen** en `media/juegos/images/nuevo-juego.jpg`
 
-## Notas Técnicas
+### **Cómo Agregar Nuevos Productos:**
 
-- El reproductor de radio requiere conexión a internet
-- Las notificaciones se muestran en la esquina superior derecha
-- El contador de visitantes se almacena en localStorage
-- Las animaciones utilizan CSS transitions y JavaScript Intersection Observer
+1. **Edita el archivo**: `media/productos/data.json`
+2. **Agrega una nueva entrada**:
+```json
+{
+  "categoria": "Merchandise",
+  "nombre": "Nuevo Producto",
+  "imagen": "nuevo-producto.jpg",
+  "link": "https://example.com/descargar"
+}
+```
 
-## Soporte
+3. **Coloca la imagen** en `media/productos/images/nuevo-producto.jpg`
 
-Para soporte técnico o preguntas sobre el proyecto, contacta al equipo de JA GAMES.
+## 📋 Categorías Disponibles
+
+### **Juegos:**
+- `UMF` - Ultra Music Festival
+- `Ultra` - Ultra Music Festival
+- `EDC` - Electric Daisy Carnival
+- `Variados` - Otros juegos
+
+### **Productos:**
+- `Merchandise` - Ropa y accesorios
+- `Accesorios` - Accesorios varios
+- `Digital` - Contenido digital
+
+## 🖼️ Gestión de Imágenes
+
+### **Especificaciones:**
+- **Formato**: JPG, PNG, WebP
+- **Tamaño recomendado**: 300x200 píxeles
+- **Ubicación**: `media/[seccion]/images/`
+
+### **Ejemplo de Discord:**
+1. **Descarga la imagen** de Discord
+2. **Renómbrala** (ej: `mi-juego.jpg`)
+3. **Colócala** en la carpeta correspondiente
+4. **Actualiza** el `data.json` con el nombre del archivo
+
+## 🔧 Funcionalidades
+
+### **Sistema Automático:**
+- ✅ **Carga dinámica** desde archivos JSON
+- ✅ **Agrupación por categorías**
+- ✅ **Imágenes automáticas**
+- ✅ **Enlaces funcionales**
+- ✅ **Diseño responsive**
+
+### **Radio 24/7:**
+- ✅ **Stream en vivo** desde Zeno.fm
+- ✅ **Reproductor flotante** entre páginas
+- ✅ **Controles de volumen**
+- ✅ **Visualizador de audio**
+
+### **Navegación:**
+- ✅ **Páginas separadas** por sección
+- ✅ **Enlaces actualizados**
+- ✅ **Diseño consistente**
+
+## 🚀 Cómo Usar
+
+### **1. Iniciar el Servidor:**
+```bash
+python -m http.server 8000
+```
+
+### **2. Abrir el Sitio:**
+```
+http://localhost:8000
+```
+
+### **3. Navegar:**
+- **Inicio**: Vista general
+- **Juegos**: Contenido dinámico desde JSON
+- **Productos**: Contenido dinámico desde JSON
+- **JA LIVE**: Radio 24/7
+
+## 📝 Ejemplo de Agregar Contenido
+
+### **Paso 1: Preparar la imagen**
+```
+media/juegos/images/mi-nuevo-juego.jpg
+```
+
+### **Paso 2: Editar data.json**
+```json
+[
+  {
+    "categoria": "UMF",
+    "nombre": "Mi Nuevo Juego",
+    "imagen": "mi-nuevo-juego.jpg",
+    "link": "https://example.com/jugar"
+  }
+]
+```
+
+### **Paso 3: ¡Listo!**
+El contenido aparecerá automáticamente en la página de juegos.
+
+## 🎨 Personalización
+
+### **Colores del Tema:**
+- **Rojo**: `#e63946`
+- **Naranja**: `#ff6b35`
+- **Amarillo**: `#ffc107`
+
+### **Modo Oscuro:**
+El sitio incluye un tema oscuro automático que mantiene los colores principales.
+
+## 🔗 Enlaces Importantes
+
+- **Radio Stream**: `https://stream.zeno.fm/hx2n86ucgabuv`
+- **API de Metadatos**: `https://api.zeno.fm/station/hx2n86ucgabuv`
+
+## 📱 Responsive Design
+
+El sitio es completamente responsive y funciona en:
+- 📱 **Móviles**
+- 📱 **Tablets**
+- 💻 **Desktop**
+
+## 🛠️ Tecnologías Utilizadas
+
+- **HTML5** - Estructura
+- **CSS3** - Estilos y animaciones
+- **JavaScript** - Interactividad
+- **JSON** - Gestión de datos
+- **Font Awesome** - Iconos
 
 ---
 
-**JA GAMES** - Tu Portal de Entretenimiento Definitivo 🎮🎵
+**¡El sistema está listo para usar! Solo agrega contenido a los archivos JSON y las imágenes correspondientes.**

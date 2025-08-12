@@ -1,0 +1,42 @@
+[
+  {
+    "categoria": "Festivales",
+    "nombre": "MYSTERAL25",
+    "imagen_base": "MysteralBlack.png",
+    "link": "https://example.com/umf-event",
+    "titulo": "Mysteral 2025",
+    "descripcion": "El eventó de la temporada navideña ha llegado!!!!",
+    "fecha": "",
+    "dj_sets": [
+      "Soon..."
+    ]
+  },
+
+  {
+    "categoria": "Eventos",
+    "nombre": "JA GAMES CAVE ROOM",
+    "imagen_base": "DiscordImage.png",
+    "link": "https://discord.gg/aTTXVux7N8?event=1394399127147643010",
+    "titulo": "JA GAMES Cave Room | Session #4",
+    "descripcion": "Evento exclusivo de JA GAMES, una rave unica en su tipo con DJ Sets alocados por más de 2h",
+    "fecha": "07/09/2025",
+    "dj_sets": [
+      "Yenilik",
+      "AbrahamVampiro",
+      "Therid"
+    ]
+  },
+  
+  {
+    "categoria": "Eventos",
+    "nombre": "JA GAMES CAVE ROOM",
+    "imagen_base": "DiscordImage.png",
+    "link": "",
+    "titulo": "JA GAMES Cave Room | Session #5",
+    "descripcion": "Evento exclusivo de JA GAMES, una rave unica en su tipo con DJ Sets alocados por más de 2h",
+    "fecha": "",
+    "dj_sets": [
+      "Soon..."
+    ]
+  }
+]

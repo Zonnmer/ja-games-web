@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "events": "Eventos",
+    "games": "Juegos",
+    "products": "Productos",
+    "information": "Información",
+    "ja_live": "JA LIVE"
+  },
+  "hero": {
+    "title": "JA GAMES",
+    "subtitle": "Tu Portal de Entretenimiento",
+    "events_title": "Eventos JA GAMES",
+    "events_subtitle": "Descubre los mejores eventos con DJ Sets increíbles",
+    "games_title": "Juegos JA GAMES",
+    "games_subtitle": "Los mejores juegos de música electrónica",
+    "products_title": "Productos JA GAMES",
+    "products_subtitle": "Merchandise y música oficial",
+    "information_title": "Información JA GAMES",
+    "information_subtitle": "Conoce más sobre nosotros"
+  },
+  "sections": {
+    "upcoming_events": "Próximos Eventos",
+    "games": "Juegos Disponibles",
+    "products": "Productos Disponibles",
+    "about": "Sobre JA GAMES"
+  },
+  "buttons": {
+    "play_now": "Jugar Ahora",
+    "buy_now": "Comprar Ahora",
+    "download_free": "Descargar Gratis",
+    "view_details": "Ver Detalles",
+    "explore": "Explorar"
+  },
+  "events": {
+    "date": "Fecha",
+    "date_pending": "Fecha por confirmar",
+    "dj_sets": "DJ Sets",
+    "festivals": "Festivales",
+    "events": "Eventos"
+  },
+  "products": {
+    "price": "Precio",
+    "size": "Talla",
+    "format": "Formato",
+    "resolution": "Resolución",
+    "consult": "Consultar",
+    "merchandise": "Merchandise",
+    "music": "Música"
+  },
+  "games": {
+    "categories": {
+      "umf": "UMF",
+      "ultra": "Ultra",
+      "edc": "EDC",
+      "various": "Variados"
+    }
+  },
+  "footer": {
+    "quick_links": "Enlaces Rápidos",
+    "follow_us": "Síguenos",
+    "copyright": "Todos los derechos reservados"
+  },
+  "radio": {
+    "title": "JA GAMES Radio",
+    "playing": "Reproduciendo",
+    "paused": "Pausado",
+    "volume": "Volumen",
+    "live_stream": "🎥 TRANSMISIÓN EN VIVO - JA GAMES",
+    "radio_live": "JA GAMES Radio - En Vivo"
+  },
+  "floating_player": {
+    "title": "Radio JA GAMES",
+    "close": "Cerrar"
+  },
+  "errors": {
+    "content_load_error": "Error al cargar el contenido",
+    "content_load_message": "No se pudo cargar el contenido. Por favor, intenta de nuevo más tarde."
+  }
+}

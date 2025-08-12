@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Início",
+    "events": "Eventos",
+    "games": "Jogos",
+    "products": "Produtos",
+    "information": "Informação",
+    "ja_live": "JA LIVE"
+  },
+  "hero": {
+    "title": "JA GAMES",
+    "subtitle": "Seu Portal de Entretenimento",
+    "events_title": "Eventos JA GAMES",
+    "events_subtitle": "Descubra os melhores eventos com DJ Sets incríveis",
+    "games_title": "Jogos JA GAMES",
+    "games_subtitle": "Os melhores jogos de música eletrônica",
+    "products_title": "Produtos JA GAMES",
+    "products_subtitle": "Merchandise e música oficial",
+    "information_title": "Informação JA GAMES",
+    "information_subtitle": "Saiba mais sobre nós"
+  },
+  "sections": {
+    "upcoming_events": "Próximos Eventos",
+    "games": "Jogos Disponíveis",
+    "products": "Produtos Disponíveis",
+    "about": "Sobre JA GAMES"
+  },
+  "buttons": {
+    "play_now": "Jogar Agora",
+    "buy_now": "Comprar Agora",
+    "download_free": "Baixar Grátis",
+    "view_details": "Ver Detalhes",
+    "explore": "Explorar"
+  },
+  "events": {
+    "date": "Data",
+    "date_pending": "Data a confirmar",
+    "dj_sets": "DJ Sets",
+    "festivals": "Festivais",
+    "events": "Eventos"
+  },
+  "products": {
+    "price": "Preço",
+    "size": "Tamanho",
+    "format": "Formato",
+    "resolution": "Resolução",
+    "consult": "Consultar",
+    "merchandise": "Merchandise",
+    "music": "Música"
+  },
+  "games": {
+    "categories": {
+      "umf": "UMF",
+      "ultra": "Ultra",
+      "edc": "EDC",
+      "various": "Variados"
+    }
+  },
+  "footer": {
+    "quick_links": "Links Rápidos",
+    "follow_us": "Siga-nos",
+    "copyright": "Todos os direitos reservados"
+  },
+  "radio": {
+    "title": "Rádio JA GAMES",
+    "playing": "Reproduzindo",
+    "paused": "Pausado",
+    "volume": "Volume",
+    "live_stream": "🎥 TRANSMISSÃO AO VIVO - JA GAMES",
+    "radio_live": "Rádio JA GAMES - Ao Vivo"
+  },
+  "floating_player": {
+    "title": "Rádio JA GAMES",
+    "close": "Fechar"
+  },
+  "errors": {
+    "content_load_error": "Erro ao carregar conteúdo",
+    "content_load_message": "Não foi possível carregar o conteúdo. Tente novamente mais tarde."
+  }
+}

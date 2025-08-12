@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JA LIVE - JA GAMES</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="containernav">
+            <div class="logo">
+                <img src="/media/GeneralImages/JAGAMES-Logo.png" class="logonav" alt="Logo de JA GAMES">
+            </div>
+            <nav class="nav">
+                <a href="../index.html">Inicio</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="juegos.html">Juegos</a>
+                <a href="productos.html">Productos</a>
+                <a href="informacion.html">Información</a>
+                <a href="ja-live.html" class="active">JA LIVE</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">JA LIVE</h1>
+            <p class="hero-subtitle">Radio en vivo 24/7 y contenido exclusivo</p>
+        </div>
+    </section>
+
+    <!-- Radio Player Section -->
+    <section class="radio-section">
+        <div class="container">
+            <div class="radio-player">
+                <div class="radio-header">
+                    <h2><i class="fas fa-broadcast-tower"></i> Radio JA GAMES</h2>
+                    <p>Música electrónica las 24 horas del día</p>
+                </div>
+                <div class="player-controls">
+                    <button id="playBtn" class="play-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="player-info">
+                        <span id="status">Detenido</span>
+                        <span id="title">JA GAMES Radio</span>
+                    </div>
+                </div>
+                <div class="volume-controls">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <audio id="audioPlayer" preload="none">
+                    <source src="https://stream.zeno.fm/hx2n86ucgabuv" type="audio/mpeg">
+                </audio>
+                <div class="audio-visualizer paused" id="audioVisualizer">
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                </div>
+                
+
+                <div class="radio-info">
+                    <div class="now-playing">
+                        <h3>Reproduciendo Ahora:</h3>
+                        <p id="currentTrack">Cargando...</p>
+                    </div>
+                    <div class="radio-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span id="listenerCount">1,234</span> oyentes
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span id="uptime">24/7</span> en vivo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Shows Section -->
+    <section class="live-shows-section">
+        <div class="container">
+            <h2 class="section-title">Próximos Shows en Vivo</h2>
+            <div class="shows-grid">
+                <div class="show-card">
+                    <div class="show-image">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="show-info">
+                        <h3>DJ Session con Alex</h3>
+                        <p class="show-time">
+                            <i class="fas fa-calendar"></i>
+                            Hoy - 8:00 PM
+                        </p>
+                        <p class="show-description">Sesión especial de house y techno con el DJ principal de JA GAMES.</p>
+                        <div class="show-actions">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-bell"></i>
+                                Recordar
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                Escuchar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <div class="show-image">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="show-info">
+                        <h3>Guest Mix - Maria Sound</h3>
+                        <p class="show-time">
+                            <i class="fas fa-calendar"></i>
+                            Mañana - 10:00 PM
+                        </p>
+                        <p class="show-description">Mix especial con la directora de eventos de JA GAMES.</p>
+                        <div class="show-actions">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-bell"></i>
+                                Recordar
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                Escuchar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-card">
+                    <div class="show-image">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="show-info">
+                        <h3>Weekend Vibes</h3>
+                        <p class="show-time">
+                            <i class="fas fa-calendar"></i>
+                            Sábado - 6:00 PM
+                        </p>
+                        <p class="show-description">Los mejores hits del fin de semana para animar tu día.</p>
+                        <div class="show-actions">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-bell"></i>
+                                Recordar
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                Escuchar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- YouTube Section -->
+    <section class="live-links-section">
+        <div class="container">
+            <h2 class="section-title">YouTube</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Canal Principal</h3>
+                    <p>Transmisiones en vivo de nuestros eventos y contenido exclusivo</p>
+                    <a href="#" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ver Canal
+                    </a>
+                </div>
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Eventos en Vivo</h3>
+                    <p>Transmisiones especiales de eventos y festivales</p>
+                    <a href="#" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ver Eventos
+                    </a>
+                </div>
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>DJ Sets</h3>
+                    <p>Sesiones completas de DJs y sets exclusivos</p>
+                    <a href="#" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ver DJ Sets
+                    </a>
+                </div>
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Behind the Scenes</h3>
+                    <p>Contenido detrás de cámaras y vlogs</p>
+                    <a href="#" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Ver BTS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JA GAMES</h3>
+                    <p>Tu destino para música electrónica y entretenimiento</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="juegos.html">Juegos</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="informacion.html">Información</a></li>
+                        <li><a href="ja-live.html">JA LIVE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JA GAMES. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
