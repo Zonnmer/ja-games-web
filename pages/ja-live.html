@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JA LIVE - JA GAMES</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/backgrounds.css">
+    <link rel="stylesheet" href="../css/titles.css">
+    <link rel="stylesheet" href="../css/radio.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/hover-effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,24 +22,35 @@
     <header class="header">
         <div class="containernav">
             <div class="logo">
-                <img src="media/GeneralImages/JAGAMES-Logo.png" class="logonav" alt="Logo de JA GAMES">
+                <img src="../media/GeneralImages/JALIVE-Logo.png" class="logonav" alt="Logo de JA LIVE">
             </div>
-            <nav class="nav">
-                <a href="../index.html">Inicio</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="juegos.html">Juegos</a>
-                <a href="productos.html">Productos</a>
-                <a href="informacion.html">Información</a>
-                <a href="ja-live.html" class="active">JA LIVE</a>
-            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <div class="nav" id="mobileNav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="juegos.html">Juegos</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+
+                    <li><a href="informacion.html">Información</a></li>
+                    <li><a href="ja-live.html" class="active">JA LIVE</a></li>
+                </ul>
+            </div>
+            <div id="languageSelector"></div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">JA LIVE</h1>
-            <p class="hero-subtitle">Radio en vivo 24/7 y contenido exclusivo</p>
+            <div class="hero-content">
+                <h2 class="heroh2">JA LIVE</h2>
+                <p>Radio en vivo 24/7 y contenido exclusivo</p>
+            </div>
         </div>
     </section>
 
@@ -44,23 +62,27 @@
                     <h2><i class="fas fa-broadcast-tower"></i> Radio JA GAMES</h2>
                     <p>Música electrónica las 24 horas del día</p>
                 </div>
+                
                 <div class="player-controls">
                     <button id="playBtn" class="play-btn">
                         <i class="fas fa-play"></i>
                     </button>
                     <div class="player-info">
-                        <span id="status">Detenido</span>
+                        <span id="status">Cargando...</span>
                         <span id="title">JA GAMES Radio</span>
                     </div>
                 </div>
+                
                 <div class="volume-controls">
                     <i class="fas fa-volume-down"></i>
                     <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
                     <i class="fas fa-volume-up"></i>
                 </div>
+                
                 <audio id="audioPlayer" preload="none">
                     <source src="https://stream.zeno.fm/hx2n86ucgabuv" type="audio/mpeg">
                 </audio>
+                
                 <div class="audio-visualizer paused" id="audioVisualizer">
                     <div class="audio-bar"></div>
                     <div class="audio-bar"></div>
@@ -70,13 +92,16 @@
                     <div class="audio-bar"></div>
                     <div class="audio-bar"></div>
                     <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
                 </div>
-                
 
                 <div class="radio-info">
                     <div class="now-playing">
                         <h3>Reproduciendo Ahora:</h3>
-                        <p id="currentTrack">Cargando...</p>
+                        <p id="currentTrack">JA GAMES Radio - En Vivo</p>
                     </div>
                     <div class="radio-stats">
                         <div class="stat">

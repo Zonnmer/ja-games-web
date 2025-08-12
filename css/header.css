@@ -1,0 +1,320 @@
+/* ===== HEADER Y NAVEGACIÓN ===== */
+
+/* Header principal */
+.header {
+    background: var(--dark-surface);
+    border-bottom: 2px solid var(--primary-red);
+    box-shadow: var(--shadow-heavy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .containernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h1 {
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-orange), var(--primary-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+}
+
+.logo p {
+    color: var(--dark-text-secondary);
+    font-size: 0.9rem;
+}
+
+.logonav {
+    height: 50px;
+    width: auto;
+}
+
+/* Navegación */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-small);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.nav a:hover {
+    color: var(--primary-red);
+    background: var(--dark-surface-2);
+}
+
+.nav a.active {
+    color: var(--primary-red);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-red);
+    transition: all var(--transition-normal);
+    transform: translateX(-50%);
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color var(--transition-normal);
+}
+
+.mobile-menu-toggle:hover {
+    color: var(--primary-red);
+}
+
+.mobile-menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: currentColor;
+    margin: 5px 0;
+    transition: var(--transition-normal);
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.language-dropdown {
+    position: relative;
+}
+
+.language-btn {
+    background: var(--dark-surface-2);
+    border: 1px solid var(--dark-border);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: all var(--transition-normal);
+}
+
+.language-btn:hover {
+    background: var(--dark-surface-3);
+    border-color: var(--primary-red);
+}
+
+.language-btn .flag {
+    font-size: 1.2rem;
+}
+
+.language-btn .lang-name {
+    font-weight: 500;
+}
+
+.language-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--shadow-heavy);
+    min-width: 150px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-normal);
+}
+
+.language-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color var(--transition-normal);
+}
+
+.language-option:hover {
+    background: var(--dark-surface-2);
+}
+
+.language-option .flag {
+    font-size: 1.1rem;
+}
+
+.language-option .lang-name {
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .header .containernav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        position: relative;
+    }
+    
+    .header .logo {
+        width: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    
+    .header .logo h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    
+    .header .logo p {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .header #languageSelector {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .language-selector {
+        margin-left: 0;
+        margin-top: 0;
+        width: auto;
+    }
+    
+    .language-btn {
+        width: auto;
+        justify-content: center;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .language-btn .lang-name {
+        display: none;
+    }
+    
+    .language-options {
+        right: 0;
+        left: 0;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    /* Navigation Mobile */
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal);
+        background: var(--dark-surface-2);
+        border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
+        z-index: 1000;
+        box-shadow: var(--shadow-heavy);
+    }
+    
+    .nav.active {
+        max-height: 300px;
+    }
+    
+    .nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    
+    .nav li {
+        margin: 0;
+        border-bottom: 1px solid var(--dark-border);
+    }
+    
+    .nav li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav a {
+        padding: 1rem;
+        display: block;
+        text-align: left;
+        border-radius: 0;
+    }
+    
+    .nav a:hover {
+        background: var(--dark-surface-3);
+    }
+}

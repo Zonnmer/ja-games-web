@@ -1,103 +1,207 @@
-# 🎮 Sistema de Gestión de Contenido - JA GAMES
+# Sistema de Gestión de Contenido - JA GAMES
 
-Este sistema te permite agregar contenido dinámicamente a las secciones de **Juegos**, **Productos** y **Eventos** sin necesidad de tocar el código HTML.
+Este documento explica cómo gestionar el contenido dinámico de la web de JA GAMES.
 
 ## 📁 Estructura de Archivos
 
 ```
 media/
 ├── juegos/
-│   ├── data.json          # Datos de juegos
-│   └── images/            # Imágenes de juegos
+│   ├── data.json
+│   └── images/
 ├── productos/
-│   ├── data.json          # Datos de productos
-│   └── images/            # Imágenes de productos
-└── eventos/
-    ├── data.json          # Datos de eventos
-    └── images/            # Imágenes de eventos
+│   ├── data.json
+│   └── images/
+├── eventos/
+│   ├── data.json
+│   └── images/
+└── empleados/
+    ├── data.json
+    └── images/
 ```
 
-## 🎯 Cómo Agregar Contenido
+## 🎮 Gestión de Juegos
 
-### 1. **Juegos** (`media/juegos/data.json`)
+### Archivo: `media/juegos/data.json`
 
-Estructura para cada juego:
 ```json
 {
-  "categoria": "UMF",
-  "nombre": "Nombre del Juego",
-  "logo": "logo-juego.png",
-  "imagen_base": "imagen-juego.jpg",
-  "link": "https://ejemplo.com/juego",
-  "titulo": "Título del Juego",
-  "descripcion": "Descripción detallada del juego"
+  "juegos": [
+    {
+      "nombre": "UMF 2024",
+      "imagen_base": "umf2024.png",
+      "descripcion": "Juego oficial del Ultra Music Festival 2024",
+      "categoria": "Festival",
+      "link": "https://ejemplo.com/juego-umf"
+    }
+  ]
 }
 ```
 
-**Campos:**
-- `categoria`: UMF, Ultra, EDC, Variados
-- `nombre`: Nombre interno del juego
-- `logo`: Archivo de logo (opcional)
-- `imagen_base`: Imagen principal del juego
-- `link`: URL para jugar
-- `titulo`: Título que se muestra
-- `descripcion`: Descripción del juego
+### Campos Requeridos:
+- **nombre**: Título del juego
+- **imagen_base**: Nombre del archivo de imagen (con extensión)
+- **descripcion**: Descripción del juego
+- **categoria**: Categoría del juego
+- **link**: URL del juego
 
-### 2. **Productos** (`media/productos/data.json`)
+## 🛍️ Gestión de Productos
 
-Estructura para cada producto:
+### Archivo: `media/productos/data.json`
+
 ```json
 {
-  "categoria": "Merchandise",
-  "nombre": "Nombre del Producto",
-  "logo": "logo-producto.png",
-  "imagen_base": "imagen-producto.jpg",
-  "link": "https://ejemplo.com/producto",
-  "titulo": "Título del Producto",
-  "descripcion": "Descripción del producto",
-  "precio": "$25.99",
-  "talla": "S, M, L, XL"
+  "productos": [
+    {
+      "nombre": "Camiseta JA GAMES",
+      "imagen_base": "tshirt.jpg",
+      "descripcion": "Camiseta oficial de JA GAMES",
+      "precio": "$25.00",
+      "talla": "M",
+      "link": "https://ejemplo.com/producto"
+    }
+  ]
 }
 ```
 
-**Campos:**
-- `categoria`: Merchandise, Música
-- `nombre`: Nombre interno del producto
-- `logo`: Archivo de logo (opcional)
-- `imagen_base`: Imagen principal del producto
-- `link`: URL de compra/descarga
-- `titulo`: Título que se muestra
-- `descripcion`: Descripción del producto
-- `precio`: Precio (o "Gratis")
-- `talla`: Tallas disponibles (para ropa)
-- `formato`: Formato de archivo (para música)
-- `resolucion`: Resolución (para wallpapers)
+### Campos Requeridos:
+- **nombre**: Nombre del producto
+- **imagen_base**: Nombre del archivo de imagen
+- **descripcion**: Descripción del producto
+- **precio**: Precio del producto
+- **link**: URL de compra
 
-### 3. **Eventos** (`media/eventos/data.json`)
+### Campos Opcionales:
+- **talla**: Talla del producto
+- **formato**: Formato (para productos digitales)
+- **resolucion**: Resolución (para wallpapers, etc.)
 
-Estructura para cada evento:
+## 🎉 Gestión de Eventos
+
+### Archivo: `media/eventos/data.json`
+
 ```json
 {
-  "categoria": "Festivales",
-  "nombre": "Nombre del Evento",
-  "imagen_base": "imagen-evento.jpg",
-  "link": "https://ejemplo.com/evento",
-  "titulo": "Título del Evento",
-  "descripcion": "Descripción del evento",
-  "fecha": "22-24 Marzo 2024",
-  "dj_sets": ["DJ 1", "DJ 2", "DJ 3"]
+  "eventos": [
+    {
+      "nombre": "Mysteral Black",
+      "imagen_base": "MysteralBlack.png",
+      "descripcion": "Evento nocturno de música electrónica",
+      "fecha": "15 de Diciembre, 2024",
+      "link": "https://ejemplo.com/evento",
+      "dj_sets": ["DJ Alex", "DJ Maria", "DJ Carlos"]
+    }
+  ]
 }
 ```
 
-**Campos:**
-- `categoria`: Festivales, Eventos
-- `nombre`: Nombre interno del evento
-- `imagen_base`: Imagen principal del evento
-- `link`: URL del evento
-- `titulo`: Título que se muestra
-- `descripcion`: Descripción del evento
-- `fecha`: Fecha del evento
-- `dj_sets`: Array con nombres de DJs
+### Campos Requeridos:
+- **nombre**: Nombre del evento
+- **imagen_base**: Nombre del archivo de imagen
+- **descripcion**: Descripción del evento
+- **fecha**: Fecha del evento
+- **link**: URL del evento
+
+### Campos Opcionales:
+- **dj_sets**: Array con nombres de DJs
+
+## 👥 Gestión de Empleados
+
+### Archivo: `media/empleados/data.json`
+
+```json
+{
+  "empleados": [
+    {
+      "nombre": "Juan Andrés",
+      "foto": "https://cdn.discordapp.com/avatars/123456789/abc123.png",
+      "puesto": "Fundador & CEO",
+      "descripcion": "Fundador de JA GAMES, apasionado por la música electrónica",
+      "categoria": "Directivos",
+      "discord": "juan_andres#1234",
+      "redes_sociales": {
+        "discord": "juan_andres#1234",
+        "instagram": "@juanandres_ja",
+        "twitter": "@juanandres_ja",
+        "soundcloud": "juanandres_music",
+        "spotify": "juanandres_official",
+        "behance": "juanandres_design",
+        "github": "juanandres_dev",
+        "linkedin": "juanandres-professional",
+        "tiktok": "@juanandres_ja"
+      }
+    }
+  ],
+  "categorias": {
+    "Directivos": {
+      "descripcion": "Líderes y fundadores de JA GAMES",
+      "color": "#dc2626",
+      "icono": "fas fa-crown"
+    },
+    "Eventos": {
+      "descripcion": "Especialistas en organización y gestión de eventos",
+      "color": "#ea580c",
+      "icono": "fas fa-calendar-alt"
+    },
+    "DJs": {
+      "descripcion": "Artistas y DJs residentes de JA GAMES",
+      "color": "#d97706",
+      "icono": "fas fa-music"
+    },
+    "Diseño": {
+      "descripcion": "Equipo creativo y de diseño visual",
+      "color": "#059669",
+      "icono": "fas fa-palette"
+    },
+    "Producción": {
+      "descripcion": "Especialistas en producción musical y audio",
+      "color": "#7c3aed",
+      "icono": "fas fa-microphone"
+    },
+    "Marketing": {
+      "descripcion": "Equipo de marketing y redes sociales",
+      "color": "#0891b2",
+      "icono": "fas fa-bullhorn"
+    },
+    "Tecnología": {
+      "descripcion": "Desarrolladores y equipo técnico",
+      "color": "#0ea5e9",
+      "icono": "fas fa-code"
+    },
+    "Comunidad": {
+      "descripcion": "Gestores de comunidad y relaciones",
+      "color": "#ec4899",
+      "icono": "fas fa-users"
+    }
+  }
+}
+```
+
+### Campos Requeridos:
+- **nombre**: Nombre completo del empleado
+- **foto**: URL de Discord o nombre de archivo local
+- **puesto**: Cargo en la empresa
+- **descripcion**: Descripción del empleado
+- **categoria**: Categoría del empleado (debe coincidir con las definidas)
+
+### Campos Opcionales:
+- **discord**: Username de Discord
+- **redes_sociales**: Objeto con enlaces a redes sociales
+
+### Tipos de Foto:
+1. **URL de Discord**: `https://cdn.discordapp.com/avatars/USER_ID/AVATAR_ID.png`
+2. **Archivo local**: `nombre-imagen.jpg` (se guarda en `media/empleados/images/`)
+
+### Redes Sociales Soportadas:
+- **discord**: Username de Discord (se muestra como tooltip)
+- **instagram**: Username de Instagram
+- **twitter**: Username de Twitter
+- **soundcloud**: Username de SoundCloud
+- **spotify**: Artist ID de Spotify
+- **behance**: Username de Behance
+- **github**: Username de GitHub
+- **linkedin**: Username de LinkedIn
+- **tiktok**: Username de TikTok
 
 ## 🖼️ Gestión de Imágenes
 
@@ -105,6 +209,7 @@ Estructura para cada evento:
 - **Juegos**: `media/juegos/images/`
 - **Productos**: `media/productos/images/`
 - **Eventos**: `media/eventos/images/`
+- **Empleados**: `media/empleados/images/` (solo para archivos locales)
 
 ### Formatos Soportados:
 - JPG, JPEG
@@ -113,95 +218,61 @@ Estructura para cada evento:
 - WebP
 
 ### Tamaños Recomendados:
-- **Imágenes principales**: 300x200px
-- **Logos**: 100x100px
-- **Banners**: 800x400px
+- **Juegos/Productos/Eventos**: 400x300px
+- **Empleados**: 300x300px (cuadradas)
 
-## 📝 Ejemplos de Uso
+## 🔧 Cómo Agregar Nuevo Contenido
 
-### Agregar un Nuevo Juego:
+### 1. Agregar Imagen
+1. Sube la imagen a la carpeta correspondiente
+2. Anota el nombre exacto del archivo
 
-1. **Agregar imagen** a `media/juegos/images/mi-juego.jpg`
-2. **Editar** `media/juegos/data.json`:
-```json
-{
-  "categoria": "UMF",
-  "nombre": "Mi Nuevo Juego",
-  "imagen_base": "mi-juego.jpg",
-  "link": "https://ejemplo.com/mi-juego",
-  "titulo": "Mi Juego Increíble",
-  "descripcion": "Un juego emocionante de música electrónica"
-}
-```
+### 2. Actualizar JSON
+1. Abre el archivo `data.json` correspondiente
+2. Agrega una nueva entrada siguiendo la estructura
+3. Usa el nombre exacto de la imagen en `imagen_base` o `foto`
 
-### Agregar un Nuevo Producto:
+### 3. Verificar
+1. Guarda el archivo JSON
+2. Recarga la página correspondiente
+3. Verifica que el contenido aparezca correctamente
 
-1. **Agregar imagen** a `media/productos/images/mi-producto.jpg`
-2. **Editar** `media/productos/data.json`:
-```json
-{
-  "categoria": "Merchandise",
-  "nombre": "Mi Producto",
-  "imagen_base": "mi-producto.jpg",
-  "link": "https://ejemplo.com/mi-producto",
-  "titulo": "Mi Producto Oficial",
-  "descripcion": "Producto exclusivo de JA GAMES",
-  "precio": "$29.99",
-  "talla": "S, M, L, XL"
-}
-```
+## 📱 Características Especiales
 
-### Agregar un Nuevo Evento:
+### Empleados con URLs de Discord
+- Las fotos de Discord se cargan directamente desde la URL
+- No necesitas descargar las imágenes
+- Se actualizan automáticamente cuando cambias el avatar en Discord
 
-1. **Agregar imagen** a `media/eventos/images/mi-evento.jpg`
-2. **Editar** `media/eventos/data.json`:
-```json
-{
-  "categoria": "Festivales",
-  "nombre": "Mi Festival",
-  "imagen_base": "mi-evento.jpg",
-  "link": "https://ejemplo.com/mi-evento",
-  "titulo": "Mi Festival 2024",
-  "descripcion": "El festival más grande del año",
-  "fecha": "15-17 Diciembre 2024",
-  "dj_sets": ["JA GAMES", "DJ Invitado", "Artista Local"]
-}
-```
+### Categorías de Empleados
+- Cada categoría tiene su propio color e icono
+- Los empleados se agrupan automáticamente por categoría
+- Las categorías se pueden personalizar en el JSON
 
-## 🔧 Características del Sistema
+### Redes Sociales
+- Los iconos se muestran automáticamente según la red social
+- Los enlaces se abren en nuevas pestañas
+- Discord muestra el username como tooltip
 
-### ✅ **Ventajas:**
-- **Fácil de usar**: Solo editar archivos JSON
-- **Sin código**: No necesitas tocar HTML/CSS/JS
-- **Organizado**: Contenido separado por categorías
-- **Flexible**: Estructuras específicas para cada tipo
-- **Escalable**: Fácil agregar más contenido
+## 🚨 Notas Importantes
 
-### 🎨 **Características Visuales:**
-- **Títulos blancos** para mejor contraste
-- **Colores oscuros** elegantes
-- **Efectos hover** suaves
-- **Responsive** en todos los dispositivos
-- **Carga dinámica** sin recargar página
+1. **Nombres de archivos**: Usa nombres sin espacios, preferiblemente en minúsculas
+2. **Extensiones**: Incluye siempre la extensión del archivo (.jpg, .png, etc.)
+3. **URLs de Discord**: Asegúrate de que la URL sea válida y accesible
+4. **Categorías**: Las categorías de empleados deben coincidir exactamente con las definidas
+5. **Backup**: Haz backup de los archivos JSON antes de hacer cambios importantes
 
-### 📱 **Compatibilidad:**
-- **Navegadores**: Chrome, Firefox, Safari, Edge
-- **Dispositivos**: Desktop, Tablet, Mobile
-- **Imágenes**: Placeholder automático si no existe
+## 🔄 Actualización Automática
 
-## 🚀 Cómo Probar
+El contenido se actualiza automáticamente cuando:
+- Cambias el archivo JSON
+- Recargas la página
+- No necesitas reiniciar el servidor
 
-1. **Edita** el archivo JSON correspondiente
-2. **Agrega** las imágenes a la carpeta `images/`
-3. **Recarga** la página en el navegador
-4. **Verifica** que el contenido aparezca correctamente
+## 📞 Soporte
 
-## ⚠️ Notas Importantes
-
-- **Nombres de archivos**: Usa solo letras, números y guiones
-- **URLs**: Asegúrate de que los enlaces funcionen
-- **Imágenes**: Optimiza las imágenes para web
-- **Backup**: Haz copia de seguridad antes de editar
-- **Validación**: Verifica que el JSON sea válido
-
-¡El sistema está listo para usar! 🎮✨
+Si tienes problemas con el sistema de contenido:
+1. Verifica que los nombres de archivos coincidan exactamente
+2. Revisa la sintaxis JSON (usa un validador online)
+3. Verifica que las URLs sean accesibles
+4. Revisa la consola del navegador para errores

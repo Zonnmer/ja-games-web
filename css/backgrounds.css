@@ -1,0 +1,47 @@
+/* ===== FONDOS - JA GAMES ===== */
+
+/* Hero Section Background */
+.hero {
+    display: flex;
+    align-items: center;
+    background: var(--dark-surface);
+    color: var(--dark-text);
+    margin-top: 70px;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--primary-red);
+    height: 40vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../media/GeneralImages/Background.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Hero Background */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 0 60px;
+        height: 35vh;
+        margin-top: 60px;
+    }
+    
+    .hero::before {
+        opacity: 0.4;
+    }
+}

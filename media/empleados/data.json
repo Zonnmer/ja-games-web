@@ -1,0 +1,170 @@
+{
+  "empleados": [
+    {
+      "nombre": "Juan Andrés",
+      "foto": "https://cdn.discordapp.com/avatars/123456789/abc123.png",
+      "puesto": "Fundador & CEO",
+      "descripcion": "Fundador de JA GAMES, apasionado por la música electrónica y la creación de experiencias únicas.",
+      "categoria": "Owners",
+      "discord": "juan_andres#1234",
+      "redes_sociales": {
+        "discord": "juan_andres#1234",
+        "instagram": "@juanandres_ja",
+        "twitter": "@juanandres_ja"
+      }
+    },
+    {
+      "nombre": "María García",
+      "foto": "https://cdn.discordapp.com/avatars/987654321/def456.png",
+      "puesto": "Directora de Eventos",
+      "descripcion": "Especialista en organización de eventos masivos y festivales.",
+      "categoria": "Staff",
+      "discord": "maria_garcia#5678",
+      "redes_sociales": {
+        "discord": "maria_garcia#5678",
+        "instagram": "@mariagarcia_events"
+      }
+    },
+    {
+      "nombre": "Carlos Rodríguez",
+      "foto": "https://cdn.discordapp.com/avatars/456789123/ghi789.png",
+      "puesto": "DJ Principal",
+      "descripcion": "DJ residente de JA GAMES con un estilo único que fusiona house y techno.",
+      "categoria": "Staff",
+      "discord": "carlos_dj#9012",
+      "redes_sociales": {
+        "discord": "carlos_dj#9012",
+        "soundcloud": "carlosrodriguez_dj",
+        "instagram": "@carlosrodriguez_dj"
+      }
+    },
+    {
+      "nombre": "Ana Martínez",
+      "foto": "https://cdn.discordapp.com/avatars/789123456/jkl012.png",
+      "puesto": "Diseñadora Gráfica",
+      "descripcion": "Responsable de toda la identidad visual de JA GAMES.",
+      "categoria": "Media",
+      "discord": "ana_design#3456",
+      "redes_sociales": {
+        "discord": "ana_design#3456",
+        "behance": "anamartinez_design",
+        "instagram": "@anamartinez_design"
+      }
+    },
+    {
+      "nombre": "Luis Fernández",
+      "foto": "https://cdn.discordapp.com/avatars/321654987/mno345.png",
+      "puesto": "Productor Musical",
+      "descripcion": "Productor de música electrónica y responsable de la calidad de audio.",
+      "categoria": "Media",
+      "discord": "luis_producer#7890",
+      "redes_sociales": {
+        "discord": "luis_producer#7890",
+        "spotify": "luisfernandez_music",
+        "soundcloud": "luisfernandez_producer"
+      }
+    },
+    {
+      "nombre": "Sofia López",
+      "foto": "https://cdn.discordapp.com/avatars/654321987/pqr678.png",
+      "puesto": "Manager de Redes Sociales",
+      "descripcion": "Gestiona la presencia digital de JA GAMES en todas las plataformas.",
+      "categoria": "Media",
+      "discord": "sofia_social#1234",
+      "redes_sociales": {
+        "discord": "sofia_social#1234",
+        "instagram": "@sofialopez_social",
+        "tiktok": "@sofialopez_ja"
+      }
+    },
+    {
+      "nombre": "Diego Morales",
+      "foto": "https://cdn.discordapp.com/avatars/147258369/stu901.png",
+      "puesto": "Desarrollador Web",
+      "descripcion": "Desarrollador full-stack responsable de la plataforma web de JA GAMES.",
+      "categoria": "Devs",
+      "discord": "diego_dev#5678",
+      "redes_sociales": {
+        "discord": "diego_dev#5678",
+        "github": "diegomorales_dev",
+        "linkedin": "diegomorales-dev"
+      }
+    },
+    {
+      "nombre": "Valentina Ruiz",
+      "foto": "https://cdn.discordapp.com/avatars/963852741/vwx234.png",
+      "puesto": "Coordinadora de Comunidad",
+      "descripcion": "Gestiona la comunidad de JA GAMES y organiza eventos virtuales.",
+      "categoria": "Mods",
+      "discord": "valentina_community#9012",
+      "redes_sociales": {
+        "discord": "valentina_community#9012",
+        "instagram": "@valentinaruiz_community",
+        "twitter": "@valentinaruiz_ja"
+      }
+    },
+    {
+      "nombre": "Roberto Silva",
+      "foto": "https://cdn.discordapp.com/avatars/159357486/yza567.png",
+      "puesto": "Co-Fundador",
+      "descripcion": "Co-fundador de JA GAMES con visión estratégica y experiencia en gestión.",
+      "categoria": "Owners",
+      "discord": "roberto_silva#3456",
+      "redes_sociales": {
+        "discord": "roberto_silva#3456",
+        "linkedin": "robertosilva-founder"
+      }
+    },
+    {
+      "nombre": "Carmen Vega",
+      "foto": "https://cdn.discordapp.com/avatars/753951486/bcd890.png",
+      "puesto": "Desarrollador Frontend",
+      "descripcion": "Especialista en interfaces de usuario y experiencia de usuario.",
+      "categoria": "Devs",
+      "discord": "carmen_dev#7890",
+      "redes_sociales": {
+        "discord": "carmen_dev#7890",
+        "github": "carmenvega_dev",
+        "dribbble": "carmenvega_ui"
+      }
+    },
+    {
+      "nombre": "Miguel Torres",
+      "foto": "https://cdn.discordapp.com/avatars/951753486/efg123.png",
+      "puesto": "Moderador Senior",
+      "descripcion": "Moderador experimentado que mantiene la armonía en la comunidad.",
+      "categoria": "Mods",
+      "discord": "miguel_mod#2345",
+      "redes_sociales": {
+        "discord": "miguel_mod#2345"
+      }
+    }
+  ],
+  "categorias": {
+    "Owners": {
+      "descripcion": "Fundadores y propietarios de JA GAMES",
+      "color": "#dc2626",
+      "icono": "fas fa-crown"
+    },
+    "Devs": {
+      "descripcion": "Desarrolladores y equipo técnico",
+      "color": "#0ea5e9",
+      "icono": "fas fa-code"
+    },
+    "Mods": {
+      "descripcion": "Moderadores de la comunidad",
+      "color": "#059669",
+      "icono": "fas fa-shield-alt"
+    },
+    "Staff": {
+      "descripcion": "Personal administrativo y operativo",
+      "color": "#ea580c",
+      "icono": "fas fa-users"
+    },
+    "Media": {
+      "descripcion": "Equipo creativo y de medios",
+      "color": "#7c3aed",
+      "icono": "fas fa-palette"
+    }
+  }
+}

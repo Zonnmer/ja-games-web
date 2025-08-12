@@ -12,6 +12,8 @@ class ContentLoader {
         if (path.includes('juegos.html')) return 'juegos';
         if (path.includes('productos.html')) return 'productos';
         if (path.includes('eventos.html')) return 'eventos';
+        if (path.includes('empleados.html')) return 'empleados';
+        if (path.includes('informacion.html')) return 'empleados'; // Cargar empleados en información
         return null;
     }
 
@@ -43,17 +45,31 @@ class ContentLoader {
         const container = this.getContainer();
         if (!container) return;
 
-        // Group by category
-        const groupedData = this.groupByCategory(data);
-        
+        // Handle different data structures
+        let items;
+        if (this.currentPage === 'empleados' && data.empleados) {
+            items = data.empleados;
+        } else if (Array.isArray(data)) {
+            items = data;
+        } else {
+            console.error('Invalid data structure:', data);
+            this.showError();
+            return;
+        }
+
         // Clear existing content
         container.innerHTML = '';
         
-        // Render each category
-        Object.keys(groupedData).forEach(category => {
-            const categorySection = this.createCategorySection(category, groupedData[category]);
-            container.appendChild(categorySection);
+        // Create single grid for all employees (like in first image)
+        const grid = document.createElement('div');
+        grid.className = 'content-grid';
+        
+        items.forEach(item => {
+            const card = this.createItemCard(item);
+            grid.appendChild(card);
         });
+        
+        container.appendChild(grid);
     }
 
     groupByCategory(data) {
@@ -71,9 +87,9 @@ class ContentLoader {
         const section = document.createElement('div');
         section.className = 'category-section';
         
-        const title = document.createElement('h2');
+        const title = document.createElement('h3');
         title.className = 'category-title';
-        title.textContent = category;
+        title.innerHTML = `<i class="${this.getCategoryIcon(category)}"></i> ${category}`;
         
         const grid = document.createElement('div');
         grid.className = 'content-grid';
@@ -96,12 +112,29 @@ class ContentLoader {
         const image = document.createElement('div');
         image.className = 'content-image';
         
-        // Use placeholder image if no image is provided
-        const imgSrc = item.imagen_base ? `../media/${this.currentPage}/images/${item.imagen_base}` : 'https://via.placeholder.com/300x200/ff6b35/ffffff?text=JA+GAMES';
+        // Use different image paths for employees vs other content
+        let imgSrc;
+        if (this.currentPage === 'empleados' || (this.currentPage === 'empleados' && window.location.pathname.includes('informacion.html'))) {
+            // For employees, check if foto is a URL (starts with http) or a local file
+            if (item.foto && item.foto.startsWith('http')) {
+                imgSrc = item.foto; // Use Discord URL directly
+            } else {
+                imgSrc = item.foto ? `../media/empleados/images/${item.foto}` : '';
+            }
+        } else {
+            imgSrc = item.imagen_base ? `../media/${this.currentPage}/images/${item.imagen_base}` : 'https://via.placeholder.com/300x200/ff6b35/ffffff?text=JA+GAMES';
+        }
         
-        image.innerHTML = `
-            <img src="${imgSrc}" alt="${item.nombre}" onerror="this.src='https://via.placeholder.com/300x200/ff6b35/ffffff?text=JA+GAMES'">
-        `;
+        // Para empleados, usar avatar circular
+        if (this.currentPage === 'empleados' || (this.currentPage === 'empleados' && window.location.pathname.includes('informacion.html'))) {
+            if (imgSrc && imgSrc.startsWith('http')) {
+                image.innerHTML = `<img src="${imgSrc}" alt="${item.nombre}" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-user\\'></i>'">`;
+            } else {
+                image.innerHTML = '<i class="fas fa-user"></i>';
+            }
+        } else {
+            image.innerHTML = `<img src="${imgSrc}" alt="${item.nombre}" onerror="this.src='https://via.placeholder.com/300x200/ff6b35/ffffff?text=JA+GAMES'">`;
+        }
         
         const content = document.createElement('div');
         content.className = 'content-info';
@@ -123,6 +156,8 @@ class ContentLoader {
                 return this.renderProductInfo(item);
             case 'eventos':
                 return this.renderEventInfo(item);
+            case 'empleados':
+                return this.renderEmployeeInfo(item);
             default:
                 return this.renderDefaultInfo(item);
         }
@@ -180,6 +215,47 @@ class ContentLoader {
         `;
     }
 
+    renderEmployeeInfo(item) {
+                        const redesSocialesHtml = item.redes_sociales ? `
+                    <div class="employee-social">
+                        ${item.redes_sociales.discord ? `<a href="#" class="social-link discord" title="Discord: ${item.redes_sociales.discord}">Discord</a>` : ''}
+                        ${item.redes_sociales.instagram ? `<a href="https://instagram.com/${item.redes_sociales.instagram.replace('@', '')}" class="social-link instagram" target="_blank">Instagram</a>` : ''}
+                        ${item.redes_sociales.twitter ? `<a href="https://twitter.com/${item.redes_sociales.twitter.replace('@', '')}" class="social-link twitter" target="_blank">Twitter</a>` : ''}
+                        ${item.redes_sociales.soundcloud ? `<a href="https://soundcloud.com/${item.redes_sociales.soundcloud}" class="social-link soundcloud" target="_blank">SoundCloud</a>` : ''}
+                        ${item.redes_sociales.spotify ? `<a href="https://open.spotify.com/artist/${item.redes_sociales.spotify}" class="social-link spotify" target="_blank">Spotify</a>` : ''}
+                        ${item.redes_sociales.behance ? `<a href="https://behance.net/${item.redes_sociales.behance}" class="social-link behance" target="_blank">Behance</a>` : ''}
+                        ${item.redes_sociales.github ? `<a href="https://github.com/${item.redes_sociales.github}" class="social-link github" target="_blank">GitHub</a>` : ''}
+                        ${item.redes_sociales.linkedin ? `<a href="https://linkedin.com/in/${item.redes_sociales.linkedin}" class="social-link linkedin" target="_blank">LinkedIn</a>` : ''}
+                        ${item.redes_sociales.tiktok ? `<a href="https://tiktok.com/@${item.redes_sociales.tiktok.replace('@', '')}" class="social-link tiktok" target="_blank">TikTok</a>` : ''}
+                    </div>
+                ` : '';
+
+        return `
+            <h3>${item.nombre}</h3>
+            <div class="employee-position">
+                <i class="fas fa-briefcase"></i>
+                <span>${item.puesto}</span>
+            </div>
+            <p class="employee-description">${item.descripcion || 'Miembro del equipo JA GAMES'}</p>
+            <div class="employee-category">
+                <i class="${this.getCategoryIcon(item.categoria)}"></i>
+                <span>${item.categoria}</span>
+            </div>
+            ${redesSocialesHtml}
+        `;
+    }
+
+    getCategoryIcon(categoria) {
+        const iconos = {
+            'Owners': 'fas fa-crown',
+            'Devs': 'fas fa-code',
+            'Mods': 'fas fa-shield-alt',
+            'Staff': 'fas fa-users',
+            'Media': 'fas fa-palette'
+        };
+        return iconos[categoria] || 'fas fa-user';
+    }
+
     renderDefaultInfo(item) {
         return `
             <h3>${item.nombre}</h3>
@@ -197,6 +273,8 @@ class ContentLoader {
             return document.querySelector('.products-container') || document.querySelector('.content-container');
         } else if (this.currentPage === 'eventos') {
             return document.querySelector('.events-container') || document.querySelector('.content-container');
+        } else if (this.currentPage === 'empleados') {
+            return document.querySelector('.empleados-container') || document.querySelector('.content-container');
         }
         return null;
     }

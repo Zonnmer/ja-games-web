@@ -17,6 +17,10 @@ let streamInterval = null;
 let metadataInterval = null;
 let currentTrack = 'Cargando...';
 
+// Variables para estadísticas en tiempo real
+let listenerCount = 1234;
+let listenerInterval = null;
+
 // Variables para el reproductor flotante
 let floatingPlayer = null;
 let floatingPlayBtn = null;
@@ -96,6 +100,9 @@ function initializeRadioPlayer() {
     
     // Intentar obtener metadatos usando ICY
     fetchICYMetadata();
+    
+    // Iniciar estadísticas en tiempo real
+    startLiveStats();
     
 
 }
@@ -268,6 +275,7 @@ function onPlay() {
     updateStatus('Reproduciendo', 'playing');
     updateTitle('JA GAMES Radio - En Vivo');
     updateAudioVisualizer(true);
+    startLiveStats();
     
     // Guardar estado de reproducción en localStorage
     localStorage.setItem('radioWasPlaying', 'true');
@@ -288,6 +296,7 @@ function onPause() {
     updatePlayButton(false);
     updateStatus('Pausado', 'paused');
     updateAudioVisualizer(false);
+    stopLiveStats();
     
     // Guardar estado de pausa en localStorage
     localStorage.setItem('radioWasPlaying', 'false');
@@ -362,8 +371,70 @@ function updateAudioVisualizer(playing) {
     
     if (playing) {
         audioVisualizer.classList.remove('paused');
+        audioVisualizer.classList.add('playing');
+        
+        // Iniciar animación continua de las barras
+        startVisualizerAnimation();
     } else {
+        audioVisualizer.classList.remove('playing');
         audioVisualizer.classList.add('paused');
+        
+        // Detener animación y resetear las barras
+        stopVisualizerAnimation();
+    }
+}
+
+function startVisualizerAnimation() {
+    if (audioVisualizer.animationInterval) {
+        clearInterval(audioVisualizer.animationInterval);
+    }
+    
+    audioVisualizer.animationInterval = setInterval(() => {
+        if (audioVisualizer.classList.contains('playing')) {
+            const bars = audioVisualizer.querySelectorAll('.audio-bar');
+            bars.forEach((bar, index) => {
+                const height = Math.random() * 40 + 10; // Entre 10px y 50px
+                bar.style.height = height + 'px';
+            });
+        }
+    }, 150); // Actualizar cada 150ms
+}
+
+function stopVisualizerAnimation() {
+    if (audioVisualizer.animationInterval) {
+        clearInterval(audioVisualizer.animationInterval);
+        audioVisualizer.animationInterval = null;
+    }
+    
+    // Resetear las barras
+    const bars = audioVisualizer.querySelectorAll('.audio-bar');
+    bars.forEach(bar => {
+        bar.style.height = '10px';
+    });
+}
+
+function startLiveStats() {
+    if (listenerInterval) {
+        clearInterval(listenerInterval);
+    }
+    
+    listenerInterval = setInterval(() => {
+        // Simular cambios en el número de oyentes
+        const change = Math.floor(Math.random() * 10) - 5; // -5 a +5
+        listenerCount = Math.max(1000, listenerCount + change);
+        
+        // Actualizar el elemento en el DOM
+        const listenerElement = document.getElementById('listenerCount');
+        if (listenerElement) {
+            listenerElement.textContent = listenerCount.toLocaleString();
+        }
+    }, 5000); // Actualizar cada 5 segundos
+}
+
+function stopLiveStats() {
+    if (listenerInterval) {
+        clearInterval(listenerInterval);
+        listenerInterval = null;
     }
 }
 

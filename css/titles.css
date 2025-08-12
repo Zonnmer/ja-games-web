@@ -1,0 +1,81 @@
+/* ===== ESTILOS DE TÍTULOS - JA GAMES ===== */
+
+/* Títulos principales (h1, h2, h3) */
+h1, h2, h3 {
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* Títulos de sección */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--white);
+    position: relative;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--primary-orange), var(--primary-yellow));
+    border-radius: 2px;
+}
+
+/* Títulos de hero */
+.hero h1,
+.hero h2,
+.hero .heroh2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Títulos de cards */
+.preview-card h3,
+.event-card h3,
+.game-card h3,
+.product-card h3 {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Títulos de contenido */
+.content-info h3,
+.event-content h3,
+.game-content h3,
+.product-content h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive para títulos */
+@media (max-width: 768px) {
+    .hero h1,
+    .hero h2,
+    .hero .heroh2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--white);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.3);
+        font-weight: bold;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
