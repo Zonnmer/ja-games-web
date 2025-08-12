@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeSmoothScrolling();
         initializeAnimations();
         initializeFloatingPlayer();
-        initializeLanguageSelector();
+        // initializeLanguageSelector(); // Deshabilitado temporalmente
         initializeMobileMenu();
         
         // Solo inicializar el reproductor de radio si estamos en la página ja-live.html

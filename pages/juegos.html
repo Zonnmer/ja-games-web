@@ -15,16 +15,24 @@
     <header class="header">
         <div class="containernav">
             <div class="logo">
-                <img src="/media/GeneralImages/JAGAMES-Logo.png" class="logonav" alt="Logo de JA GAMES">
+                <img src="../media/GeneralImages/JAGAMES-Logo.png" class="logonav" alt="Logo de JA GAMES">
             </div>
-            <nav class="nav">
-                <a href="../index.html">Inicio</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="juegos.html" class="active">Juegos</a>
-                <a href="productos.html">Productos</a>
-                <a href="informacion.html">Información</a>
-                <a href="ja-live.html">JA LIVE</a>
-            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <div class="nav" id="mobileNav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="juegos.html" class="active">Juegos</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="informacion.html">Información</a></li>
+                    <li><a href="ja-live.html">JA LIVE</a></li>
+                </ul>
+            </div>
+            <div id="languageSelector"></div>
         </div>
     </header>
 
@@ -85,6 +93,7 @@
         </div>
     </footer>
 
+    <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/content-loader.js"></script>
 </body>
